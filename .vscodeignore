@@ -1,0 +1,17 @@
+*.log
+.tmp
+.vscode/**
+DS_Store
+bin/**
+coverage
+logs
+npm-debug.log*
+package-lock.json
+scripts/*
+tmp
+tmp.*
+var/tmp
+eslint.config.js
+jsconfig.json
+prettier.config.js
+.gitignore

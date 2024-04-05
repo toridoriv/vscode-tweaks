@@ -1,0 +1,21 @@
+# 💬 Automatically generated
+coverage
+DS_Store
+node_modules
+package-lock.json
+
+# 💬 Do not ignore
+!.vscode/**
+!bin/**
+
+# 💬 Logs
+*.log
+logs
+npm-debug.log*
+
+# 💬 Temporary
+.tmp
+tmp
+tmp.*
+var/tmp
+vscode-tweaks.*.vsix

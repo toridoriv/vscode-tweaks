@@ -1,0 +1,58 @@
+{
+  "name": "vscode-tweaks",
+  "displayName": "My Tweaks",
+  "publisher": "toridoriv",
+  "categories": ["Other"],
+  "version": "0.1.0",
+  "type": "module",
+  "description": "My tweaks for VS Code.",
+  "author": {
+    "name": "Victoria Rodriguez",
+    "email": "vrodriguezfe@icloud.com",
+    "url": "https://github.com/toridoriv"
+  },
+  "engines": {
+    "vscode": "^1.87.0"
+  },
+  "license": "GPLv3",
+  "homepage": "https://github.com/toridoriv/vscode-tweaks",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toridoriv/vscode-tweaks.git"
+  },
+  "bugs": {
+    "url": "https://github.com/toridoriv/vscode-tweaks/issues",
+    "email": "vrodriguezfe@icloud.com"
+  },
+  "main": "dist/extension.js",
+  "activationEvents": ["onLanguage:markdown"],
+  "contributes": {
+    "commands": []
+  },
+  "scripts": {
+    "start": "npm run build -- --sourcemap --watch",
+    "prebuild": "scripty",
+    "build": "node esbuild.config.mjs",
+    "package": "scripty",
+    "postbuild": "npm run package",
+    "test": "node --test",
+    "chmod": "find scripts \\( -name '*.mjs' -not -path '*/helpers/*' \\) -exec chmod +x {} \\;"
+  },
+  "devDependencies": {
+    "@toridoriv/cliffy": "github:toridoriv/cliffy",
+    "@toridoriv/eslint-config": "github:toridoriv/eslint-config",
+    "@types/chai": "^4.3.14",
+    "@types/node": "^20.12.4",
+    "@types/vscode": "^1.87.0",
+    "chai": "^5.1.0",
+    "esbuild": "^0.20.2",
+    "eslint": "^8.57.0",
+    "scripty": "^2.1.1",
+    "typescript": "5.3.2"
+  },
+  "config": {},
+  "dependencies": {
+    "@toridoriv/toolkit": "github:toridoriv/toolkit",
+    "prettier": "^2.8.8"
+  }
+}
